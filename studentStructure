@@ -1,0 +1,24 @@
+list_1 = []
+list_2 = []
+print("Give data")
+for i in range(0, 10):
+    r = int(input("\nRoll no. = "))
+    n = input("Name = ")
+    m = int(input("Marks = "))
+    list_2 = [r, n, m]
+    list_1.append(list_2)
+print("You entered")
+for i in range(0, 10):
+    print("\nRoll no. =", list_1[i][0])
+    print("Name =", list_1[i][1])
+    print("Marks =", list_1[i][2])
+print("Student with highest marks")
+high = list_1[0][2]
+loc = 0
+for i in range(0, 10):
+    if list_1[i][2] > high:
+        high = list_1[i][2]
+        loc = i
+print("\nRoll no. =", list_1[loc][0])
+print("Name =", list_1[loc][1])
+print("Marks =", list_1[loc][2])
