@@ -1,0 +1,14 @@
+f1 = open("students.txt", 'wt')
+print("Give Students Data")
+for i in range(0, 10):      # It will input and write data of 10 students on students.txt
+    RollNo = int(input())
+    Name = input()
+    Marks = int(input())
+    f1.write(str(RollNo) + '\n')
+    f1.write(Name + '\n')
+    f1.write(str(Marks) + '\n')
+f1.close()
+f2 = open("students.txt", 'rt')
+for l1 in f2.readlines():  # it will read data from students.txt and display on console line by line
+    print(l1, end='')
+f2.close()
